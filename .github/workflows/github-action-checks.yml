@@ -27,8 +27,15 @@ jobs:
       - name: Checkout Actions Repository
         uses: actions/checkout@v5
 
+      - name: Check if author is known contributor
+        id: check_author
+        run: |
+          if [[ "${{ github.actor }}" == "knownauthor1" || "${{ github.actor }}" == "knownauthor2" ]]; then
+            echo "continue_on_error=true" >> $GITHUB_OUTPUT
+          else
+            echo "continue_on_error=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Check spelling
         uses: crate-ci/typos@master
-        
-      - name: Continue-on-error if: author name
-        uses: crate-ci/typos@master
+        continue-on-error: ${{ steps.check_author.outputs.continue_on_error == 'true' && contains(github.event.head_commit.author.name, github.event.pull_request.user.login) == false }}
