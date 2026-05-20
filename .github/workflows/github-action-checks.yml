@@ -29,3 +29,6 @@ jobs:
 
       - name: Check spelling
         uses: crate-ci/typos@master
+        
+      - name: Continue-on-error if: author name
+        uses: crate-ci/typos@master
