@@ -43,13 +43,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Murch
 | Process
 | Deployed
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0008.mediawiki|8]]
 |
 | Version bits with lock-in by height
 | Shaolin Fry, Luke Dashjr
 | Informational
-| Draft
+| Complete
 |- style="background-color: #cfffcf"
 | [[bip-0009.mediawiki|9]]
 |
@@ -211,13 +211,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Mike Hearn, Matt Corallo
 | Specification
 | Deployed
-|-
+|- style="background-color: #cfffcf"
 | [[bip-0038.mediawiki|38]]
 | Applications
 | Passphrase-protected private key
 | Mike Caldwell, Aaron Voisine
 | Specification
-| Draft
+| Deployed
 |- style="background-color: #cfffcf"
 | [[bip-0039.mediawiki|39]]
 | Applications
@@ -279,7 +279,7 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Applications
 | Reusable Payment Codes for Hierarchical Deterministic Wallets
 | Justus Ranvier
-| Informational
+| Specification
 | Deployed
 |- style="background-color: #cfffcf"
 | [[bip-0048.mediawiki|48]]
@@ -302,13 +302,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Gavin Andresen
 | Informational
 | Deployed
-|-
+|- style="background-color: #ffcfcf"
 | [[bip-0052.mediawiki|52]]
 | Consensus (hard fork)
 | Durable, Low Energy Bitcoin PoW
 | Michael Dubrovsky, Bogdan Penkovsky
 | Specification
-| Draft
+| Closed
 |-
 | [[bip-0053.mediawiki|53]]
 | Consensus (soft fork)
@@ -316,13 +316,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Chris Stewart
 | Specification
 | Draft
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0054.md|54]]
 | Consensus (soft fork)
 | Consensus Cleanup
 | Antoine Poinsot, Matt Corallo
 | Specification
-| Draft
+| Complete
 |- style="background-color: #ffcfcf"
 | [[bip-0060.mediawiki|60]]
 | Peer Services
@@ -442,13 +442,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Dan Gould, Yuval Kogman
 | Specification
 | Draft
-|-
+|- style="background-color: #cfffcf"
 | [[bip-0078.mediawiki|78]]
 | Applications
 | A Simple Payjoin Proposal
 | Nicolas Dorier
 | Specification
-| Draft
+| Deployed
 |- style="background-color: #ffcfcf"
 | [[bip-0079.mediawiki|79]]
 | Applications
@@ -512,13 +512,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Dmitry Petukhov
 | Informational
 | Complete
-|-
+|- style="background-color: #cfffcf"
 | [[bip-0089.mediawiki|89]]
 | Applications
 | Chain Code Delegation
 | Jesse Posner, Jurvis Tan
 | Specification
-| Draft
+| Deployed
 |- style="background-color: #cfffcf"
 | [[bip-0090.mediawiki|90]]
 |
@@ -547,6 +547,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Fabian Jahr
 | Specification
 | Deployed
+|-
+| [[bip-0095.md|95]]
+| Applications
+| Testnet 5
+| Pol Espinasa, Fabian Jahr
+| Specification
+| Draft
 |-
 | [[bip-0098.mediawiki|98]]
 | Consensus (soft fork)
@@ -624,13 +631,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Gavin Andresen
 | Specification
 | Closed
-|-
+|- style="background-color: #ffcfcf"
 | [[bip-0110.mediawiki|110]]
 | Consensus (soft fork)
 | Reduced Data Temporary Softfork
 | Dathon Ohm
 | Specification
-| Draft
+| Closed
 |- style="background-color: #cfffcf"
 | [[bip-0111.mediawiki|111]]
 | Peer Services
@@ -743,13 +750,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Kristov Atlas
 | Informational
 | Draft
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0127.mediawiki|127]]
 | Applications
 | Simple Proof-of-Reserves Transactions
 | Steven Roose
 | Specification
-| Draft
+| Complete
 |-
 | [[bip-0128.mediawiki|128]]
 | Applications
@@ -988,13 +995,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Omar Shibli, Nicholas Gregory
 | Informational
 | Closed
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0176.mediawiki|176]]
 |
 | Bits Denomination
 | Jimmy Song
 | Informational
-| Draft
+| Complete
 |-
 | [[bip-0177.mediawiki|177]]
 |
@@ -1009,13 +1016,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Karl-Johan Alm
 | Specification
 | Draft
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0179.mediawiki|179]]
 |
 | Name for payment recipient identifiers
 | Emil Engler, Luke Dashjr
 | Informational
-| Draft
+| Complete
 |- style="background-color: #ffcfcf"
 | [[bip-0180.mediawiki|180]]
 | Peer Services
@@ -1143,6 +1150,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Specification
 | Draft
 |-
+| [[bip-0332.md|332]]
+| Peer Services
+| Stale Tip Relay
+| Anthony Towns, w0xlt, Ram
+| Specification
+| Draft
+|-
 | [[bip-0337.mediawiki|337]]
 | API/RPC
 | Compressed Transactions
@@ -1184,13 +1198,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Pieter Wuille, Jonas Nick, Anthony Towns
 | Specification
 | Deployed
-|- style="background-color: #cfffcf"
+|- style="background-color: #ffcfcf"
 | [[bip-0343.mediawiki|343]]
 | Consensus (soft fork)
 | Mandatory activation of taproot deployment
 | Shinobius, Michael Folkson
 | Specification
-| Deployed
+| Closed
 |- style="background-color: #ffcfcf"
 | [[bip-0345.mediawiki|345]]
 | Consensus (soft fork)
@@ -1233,13 +1247,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Pieter Wuille
 | Specification
 | Deployed
-|-
+|- style="background-color: #ffcfcf"
 | [[bip-0351.mediawiki|351]]
 | Applications
 | Private Payments
 | Alfred Hodler, Clark Moody
-| Informational
-| Draft
+| Specification
+| Closed
 |- style="background-color: #ffffcf"
 | [[bip-0352.mediawiki|352]]
 | Applications
@@ -1436,13 +1450,13 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Gregory Sanders
 | Informational
 | Draft
-|-
+|- style="background-color: #ffffcf"
 | [[bip-0434.md|434]]
 | Peer Services
 | Peer Feature Negotiation
 | Anthony Towns
 | Specification
-| Draft
+| Complete
 |-
 | [[bip-0440.mediawiki|440]]
 | Consensus (soft fork)
@@ -1483,6 +1497,20 @@ users (see also: [https://en.bitcoin.it/wiki/Economic_majority economic majority
 | Consensus (soft fork)
 | Taproot-native (Re)bindable Transactions
 | Gregory Sanders, Antoine Poinsot, Steven Roose
+| Specification
+| Draft
+|-
+| [[bip-0449.md|449]]
+| Consensus (soft fork)
+| OP_TWEAKADD - x-only key tweak addition
+| Jeremy Rubin
+| Specification
+| Draft
+|-
+| [[bip-0450.mediawiki|450]]
+| Applications
+| Formosa—Seed encoding by themed mnemonic stories
+| Yuri S Villas Boas, André Fidencio Gonçalves
 | Specification
 | Draft
 |-

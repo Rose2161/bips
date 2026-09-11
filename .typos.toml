@@ -16,7 +16,7 @@ extend-ignore-re = [
     "prefix.*",
     "value: .*",
     "pqNTRUsign",
-    "Strnad",
+    "nsec1.*",
 ]
 
 [default.extend-words]
@@ -29,20 +29,17 @@ Atack = "Atack"
 Falke = "Falke"
 Meni = "Meni"
 Ono = "Ono"
+Strnad = "Strnad"
 Toom = "Toom"
 
 [files]
 extend-exclude = [
     "/*/*.csv",
-    "/*.d*",
     "/*/*.d*",
     "/*/*.go",
     "/*/*.json",
     "/*/*/*.json",
-    "/*/*.mod",
-    "/*/*.proto",
-    "/*/*.py",
-    "scripts",
-    "/*/*.s*",
+    "/*/*/*/*/*/*.o",
+    "/*/*/*/*/*/*/*/*.o",
     "/*/*.t*",
 ]

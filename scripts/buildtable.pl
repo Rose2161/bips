@@ -91,6 +91,7 @@ my %AcceptableLicenses = (
 	'CC0-1.0' => undef,
 	'FSFAP' => undef,
 	'MIT' => undef,
+	'MIT-0' => undef,
 	'CC-BY-4.0' => undef,
 	'Apache-2.0' => undef,
 	'BSL-1.0' => undef,
@@ -136,7 +137,7 @@ while (++$bipnum <= $topbip) {
 		}
 	}
 	my %found;
-	my ($title, $authors, $status, $type, $layer);
+	my ($title, $authors, $status, $version, $type, $layer);
 	my ($field, $val, @field_order, $continuation);
 	while (<$F>) {
 		last if ($is_markdown && m[^```$]);
@@ -197,7 +198,7 @@ while (++$bipnum <= $topbip) {
 				die "Unacceptable license $val in $fn" unless exists $AcceptableLicenses{$val} or ($val eq 'PD' and exists $GrandfatheredPD{$bipnum}) or ($val eq 'CC-BY-SA-4.0' and exists $GrandfatheredCCBySA{$bipnum});
 			}
 		} elsif ($field eq 'Comments-URI') {
-			if ($found{'Comments-URI'}) {
+			if (not $found{'Comments-URI'}) {
 				my $first_comments_uri = sprintf('https://github.com/bitcoin/bips/wiki/Comments:BIP-%04d', $bipnum);
 				die "First Comments-URI must be exactly \"$first_comments_uri\" in $fn" unless $val eq $first_comments_uri;
 			}
@@ -205,9 +206,10 @@ while (++$bipnum <= $topbip) {
 			# Enforce date format 20XX-MM-DD, where XX is 00-99, MM is 01-12 and DD is 01-31
 			die "Invalid date format in $fn" unless $val =~ /^20\d{2}\-(?:0[1-9]|1[0-2])\-(?:0[1-9]|[12]\d|30|31)$/;
 		} elsif (exists $EmailField{$field}) {
-			$val =~ m/^(\S[^<@>]*\S) \<[^@>]*\@[\w.]+\.\w+\>$/ or die "Malformed $field line in $fn";
+			$val =~ m/^(\S[^<@>]*\S) \<[^@>]*\@[\w.-]+\.\w+\>$/ or die "Malformed $field line in $fn";
 		} elsif (exists $VersionField{$field}) {
 			$val =~ m/^(\d+\.\d+\.\d+)$/ or die "Malformed $field line in $fn";
+			$version = $val;
 		} elsif (not exists $MiscField{$field}) {
 			die "Unknown field $field in $fn";
 		}
@@ -227,6 +229,11 @@ while (++$bipnum <= $topbip) {
 	print "|-";
 	if (defined $ValidStatus{$status}) {
 		print " style=\"" . $ValidStatus{$status} . "\"";
+	}
+	if (defined $version and $version =~ m/^0+[.]/) {
+		if ($status eq "Complete" or $status eq "Deployed") {
+			die "$fn marked as $status despite pre-1.0 version ($version)";
+		}
 	}
 	print "\n";
 	print "| [[${fn}|${bipnum}]]\n";
